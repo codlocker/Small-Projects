@@ -1,0 +1,49 @@
+body
+{
+	background-color:green;
+	background-image:url("python.jpg");
+	background-size:1400px 700px;
+	display:block;
+	margin:0px;
+	padding:0px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+audio
+{
+	visibility:hidden;
+}
+#game{
+	margin:0px;
+	padding:0px;
+}
+
+#canvas
+{
+	border:1px dashed blue;
+	margin-bottom:2px;
+	margin-right:100px;
+	margin-left:100px;
+}
+#stats
+{
+	font:bold 15px Tahoma;
+	border:2px solid blue;
+	background:gray;
+	color:#e6ffff;
+	text-align:center;
+	padding:5px;
+	margin-right:400px;
+	margin-left:400px;
+	float:center;
+}
+#instr
+{
+	background:#000099;
+	padding:10px;
+	font:Georgia;
+	text-align: center;
+	color:#99e600;
+	-webkit-box-shadow:rgb(110,110,110) 8px 8px 8px;
+	-webkit-transition:background 0.8s;
+}

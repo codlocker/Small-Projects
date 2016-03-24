@@ -1,0 +1,72 @@
+body
+{
+	background-image:url("snakey.png");
+	background-position:center;
+	background-attachment:relative;
+}
+#heading
+{
+	background:#000099;
+	padding:20px;
+	font:bold 40px Georgia;
+	text-align: center;
+	color:#99e600;
+	-webkit-box-shadow:rgb(110,110,110) 8px 8px 8px;
+	-webkit-transition:background 0.8s,color 0.8s;
+}
+#heading:hover
+{
+	background-color:white;
+	color:red;
+}
+section
+{
+	background:white;
+	padding:20px;
+	margin:50px;
+}
+section h3
+{
+	background-color:#ff531a;
+	margin-right:500px;
+	margin-left:500px;
+	font-size:25px;
+	padding:10px;
+	text-align:center;
+	-webkit-transition: -webkit-transform 2s, opacity 2s, background 2s, width 2s,height 2s;
+	-webkit-box-shadow:rgb(110,110,100) 8px 8px 8px;
+}
+section h3:hover
+{
+	-webkit-transform:rotate(360deg);
+}
+section li
+{
+	background-color:#aaff00;
+	list-style-type:none;
+	padding:10px;
+	text-align:center;
+	margin:10px;
+	margin-left:100px;
+	margin-right:100px;
+	font:20px solid Helvetica;
+	-webkit-transition: -webkit-transform 1s, opacity 2s, background 2s, width 2s,height 2s;
+}
+section li:hover
+{
+	-webkit-transform:scale(1.05);
+	color:#000080;
+}
+#new_link
+{
+	text-decoration:none;
+	background-color:#CCFFFF;
+	padding:10px;
+	font:bold 15px Tahoma;
+	border-radius:25px;
+	margin-left:600px;
+}
+#new_link:hover
+{
+	background-color:#FFCCCC;	
+}

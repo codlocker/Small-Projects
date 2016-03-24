@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>Snake Game 101</title>
+	<link rel="stylesheet" type="text/css" href="Snake_game.css"/>
+	<script src="Snake_game.js"></script>
+</head>
+<body>
+	<h4 id="instr">Press Space bar to start the game and escape to quit the game</h4>
+	<section id="game">
+		<audio controls loop onkeypress="audio_func()" id="sound">
+		<source src="bgm.mp3" type="audio/mpeg">
+		Your browser does not support the audio tag
+		</audio>
+		<canvas id="canvas" width="1000px" height="600px">
+		</canvas>
+	</section>
+	<section id="stats">
+		<p id="score">Score: 0</p>
+		<p id="food">Food blocks eaten: 0</p>
+	</section>
+	<footer id="owner">
+	</footer>
+</body>
+</html>
