@@ -95,7 +95,6 @@ function init()
 {
 	score=0;fr=0;
 	grid.init(SPACE,COLS,ROWS);
-	//var snake_pos={x:ROWS/2,y:COLS/2};Does not work--Check
 	var snake_pos={x:0,y:0};
 	snake.init(LEFT,snake_pos.x,snake_pos.y);
 	grid.set(SNAKE,snake_pos.x,snake_pos.y);
