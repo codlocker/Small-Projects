@@ -6,21 +6,60 @@
     <meta name="keywords" content="HTML,CSS">
     <meta name="author" content="Ipsit Sahoo">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Assignment Solution for Module-2</title>
+    <title>Order Tracker</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
-      <h2>Tracking Order page</h2>
+      <h2>Track your orders</h2>
     </header>
     <section>
-      <form>
-
+      <div class="container">
+      <form class="search-bar row">
+        <div class="form-group col-medium-4 col-large-4">
+          <input type="search" class="form-control" placeholder="Search an order" id="search-box">
+          </div>
+        <div class="form-group col-medium-2 col-large-2">
+          <input type="button" class="form-control btn btn-info" value="Search">
+        </div>
       </form>
+    </div>
+    </section>
+    <section>
+      <div class="container orders-list">
+        <!--
+        <div class="order-panel row">
+          <div class="col-large-2 orderid">
+            <p class="text-center">Order-ID</p>
+          </div>
+          <div class="col-large-9 status">
+            <p class="text-center">Status :: Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+          <div class="col-large-1 options">
+            <p class="text-center">
+              <span class="fa fa fa-trash-o"></span>
+              <span class="fa fa-caret-down"></span>
+            </p>
+          </div>
+          <div class="col-large-12 order-description">
+            <p>Lorem ipsum dolor sit amet, scripta alterum graecis quo at. Pri omittam probatus in. Est ferri patrioque ei.
+              Justo everti volutpat his te, ne dico error viderer his, tibique intellegat ius no.</p>
+          </div>
+        </div> Sample text-->
+      </div>
     </section>
     <footer>
+      <div class="container container-footer" id = "footer">
+        <p><b>Task : </b><small>Create a tracking page which shows the status of any order by giving the order id in a search box.
+          The order id will be a searchable field as in when the user starts typing the order id he sees suggestions based on the
+          text entered and his last orders which have that text. </small></p> <p><span class="fa fa-smile-o"></span> Created by <a href="https://www.facebook.com/profile.php?id=100007726996586" target="_blank">codlocker</a></p>
+      </div>
+
       <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+      <script type="text/javascript" src="orders.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
     </footer>
   </body>

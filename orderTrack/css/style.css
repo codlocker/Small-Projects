@@ -1,1 +1,81 @@
- 
+header h2 {
+  padding: 50px 0px;
+  font-size: 3em;
+  width: 330px;
+  margin: auto;
+  text-align: left;
+  position: relative;
+}
+header h2::after {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid black;
+  width: 100%;
+  left: 0px;
+  bottom: 50px;
+  transition: 0.35s;
+  transform: scaleX(0);
+}
+header h2:hover::after{
+  transform: scaleX(1);
+}
+/*Search Area*/
+section .search-bar .col-large-4{
+  margin-right: 15px;
+}
+/*Style of the order list*/
+section .orders-list {
+  box-sizing: border-box;
+  position: relative;
+}
+.order-panel {
+  box-sizing: border-box;
+  width: inherit;
+  margin: 10px auto 5px;
+  border: 1px solid black;
+  transition: 0.35s;
+}
+.order-panel:hover {
+  box-shadow: 0px 0px 10px #ccc;
+}
+.order-panel .col-large-2 {
+  background-color: #66ff66;
+  padding: 5px;
+}
+.order-panel .col-large-1 span:nth-child(1) {
+  margin: 5px 20%;
+  color: blue;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.order-panel .col-large-1 span:nth-child(2) {
+  margin: auto;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.order-panel .order-description {
+  width: 100%;
+  background-color: #ffd480;
+  padding: 20px;
+}
+.order-panel .order-description p {
+  font-size: 20px;
+  font-family: Helvetica;
+
+}
+/*Footer */
+.container-footer > p
+{
+  text-align: center;
+  color: white;
+  font-size : 20px;
+}
+.container-footer
+{
+  margin-top: 50px;
+  width : 100% !important;
+  padding : 20px;
+  background : black;
+}
