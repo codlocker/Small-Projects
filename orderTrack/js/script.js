@@ -6,12 +6,12 @@ for(x in json) {
   var ex_element = document.getElementsByClassName("orders-list")[0];
   /*Now append the contents for order-id*/
   var orderid_div = document.createElement("div");
-  $(orderid_div).addClass("col-large-2 col-medium-2 col-xs-2 orderid");
+  $(orderid_div).addClass("col-large-2 col-medium-2 col-small-2 orderid");
   orderid_div.innerHTML='<p class = "text-center">'+x+"</p>";
   order_panel.append(orderid_div);
   /*Now append the contents for status*/
   var status_div = document.createElement("div");
-  $(status_div).addClass("col-large-9 col-medium-9 col-xs-9 status");
+  $(status_div).addClass("col-large-9 col-medium-7 col-small-7 status");
   status_text = json[x].status;
   if(json[x].status =="Repair") {
     status_text+=(" :: <b> Date - "+json[x].repair_date+"</b>");
@@ -30,13 +30,13 @@ for(x in json) {
 
   /*Now append the contents for Options Div Element*/
   var options_div = document.createElement("div");
-  $(options_div).addClass("col-large-1 col-medium-1 col-xs-1 options");
+  $(options_div).addClass("col-large-1 col-medium-3 col-small-3 options");
   var options_text = '<p class="text-center"><span class="fa fa-envelope"></span><span class="fa fa-caret-down sh-symbol"></span></p>';
   options_div.innerHTML = options_text;
   order_panel.append(options_div);
   /*Append Description of the Orders*/
   var desc_div = document.createElement("div");
-  $(desc_div).addClass("col-large-12 col-medium-12 col-xs-12 order-description");
+  $(desc_div).addClass("col-large-12 col-medium-12 col-small-12 order-description");
   var desc_text = "";
   /*Fill Description regarding the order*/
   if(json[x].status =="Repair") {
