@@ -1,4 +1,4 @@
-# Snake-Game-Under-Development-
-A basic snake game used in old phones.
+#Web Dev Assignments-
 
- The site is published at http://codlocker.github.io/Snake-Game/
+Snake Game : http://codlocker.github.io/Snake-Game/
+Assignment: http://codlocker.github.io/orderTrack/
