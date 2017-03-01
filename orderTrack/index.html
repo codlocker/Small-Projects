@@ -24,7 +24,8 @@
       <div class="container">
       <div class="search-bar row">
         <div class="form-group col-medium-4 col-large-4 col-small-8">
-          <input type="search" class="form-control" placeholder="Search an order" id="search-box" onclick="performAutocomplete()" ondblclick="getHistory()">
+          <input type="search" class="form-control" placeholder="Search an order" id="search-box" onkeydown="performAutocomplete()"
+          onfocus="getHistory()">
         </div>
         <div class="form-group col-medium-2 col-large-2 col-small-4">
           <button class="form-control btn btn-search" onclick="getOrderStatus()" id="search-but"> Search</button>

@@ -23,22 +23,30 @@ function performAutocomplete() {
       autoFocus: true,
       source: values,
       delay: 50,
-      minLength: 0
+      minLength: 1
     });
   });
 }
 function getHistory() {
-  var values = ["P0111","P0020"];
+  var values = [];
   var div_searched_order = document.getElementsByClassName("searched-order")[0];
   var history = div_searched_order.getElementsByClassName("order-panel");
-  for(var j = 0;j<history.length;j++) {
-    var req_class = history[j].classList[2];
-    values.push(x);
+  if(history.length > 0) {
+    for(var j = 0;j<history.length;j++) {
+      var req_class = history[j].classList[2];
+      values.push(req_class);
+    }
+  }
+  else {
+    values.push("No Suggestions");
   }
   $( "#search-box" ).autocomplete({
     source: values,
     delay: 0,
+    autoFocus: true,
     minLength: 0
+  }).focus(function(){
+    $(this).autocomplete("search");
   });
 }
 function getOrderStatus() {
