@@ -62,7 +62,7 @@ section .orders-list {
   border: 2px solid #cc6699;
   transition: 0.35s;
   height: auto;
-  background-color: white;
+  background-color: rgba(256,256,256,0.92);
 }
 .order-panel:hover {
   box-shadow: 0px 0px 10px #cc6699;
