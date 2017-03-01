@@ -34,6 +34,10 @@ header h2::after {
 header h2:hover::after{
   transform: scaleX(1);
 }
+.container h3 {
+  color: white;
+  font-weight: bolder;
+}
 /*Search Area*/
 section .search-bar .col-large-4{
   margin-right: 15px;
