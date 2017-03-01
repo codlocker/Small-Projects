@@ -1,58 +1,83 @@
-var orders = {
-  "0001":{
+{
+  "P0001":{
     "status":"Pickup",
     "executive_name":"XYZ BZZZ",
     "number" : "90839223",
     "pickup_date": "03-01-2009",
     "pickup_time" : "10:00"
   },
-  "0002":{
+  "R0002":{
     "status":"Repair",
     "comments" : "The machine is beyond repair. Major parts change necessary",
     "repair_date": "03-01-2009",
     "repair_time" : "10:00"
   },
-  "0003":{
+  "P0003":{
     "status":"Pickup",
     "executive_name":"XYZ BZZZ",
     "number" : "90839223",
     "pickup_date": "03-01-2009",
     "pickup_time" : "10:00"
   },
-  "0004":{
+  "R0004":{
     "status":"Repair",
     "comments" : "Repair Complete. Machine is running perfectly fine" ,
     "repair_date": "03-01-2009",
     "repair_time" : "10:00"
   },
-  "0005":{
+  "P0005":{
     "status":"Pickup",
     "executive_name":"XYZ BZZZ",
     "number" : "90839223",
     "pickup_date": "03-01-2009",
     "pickup_time" : "10:00"
   },
-  "0006":{
+  "D0006":{
     "status":"Delivery",
     "executive_name":"XYZ BZZZ",
     "number" : "90839223",
     "Delivery_date": "03-01-2009",
     "Delivery_time" : "10:00"
   },
-  "0007":{
+  "D0007":{
     "status":"Delivery",
     "executive_name":"XYZ BZZZ",
     "number" : "90839223",
     "Delivery_date": "03-01-2009",
     "Delivery_time" : "10:00"
   },
-  "0008":{
+  "D0008":{
     "status":"Delivery",
     "executive_name":"XYZ BZZZ",
     "number" : "90839223",
     "Delivery_date": "03-01-2009",
     "Delivery_time" : "10:00"
+  },
+  "P0009":{
+    "status":"Pickup",
+    "executive_name":"XYZ BZZZ",
+    "number" : "90839223",
+    "pickup_date": "03-01-2014",
+    "pickup_time" : "12:00"
+  },
+  "D0010":{
+    "status":"Delivery",
+    "executive_name":"XYZ BZZZ",
+    "number" : "90839223",
+    "Delivery_date": "03-01-2009",
+    "Delivery_time" : "10:00"
+  },
+  "R0011":{
+    "status":"Repair",
+    "comments" : "Repair Complete. Machine is running perfectly fine" ,
+    "repair_date": "03-01-2009",
+    "repair_time" : "10:00"
+  },
+  "P0012":{
+    "status":"Pickup",
+    "executive_name":"XYZ BZZZ",
+    "number" : "90839223",
+    "pickup_date": "03-11-2014",
+    "pickup_time" : "23:00"
   }
-};
-
-var data = JSON.stringify(orders);
+}
