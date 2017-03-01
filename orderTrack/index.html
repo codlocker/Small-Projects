@@ -10,7 +10,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/media.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
     <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/autocomplete.js"></script>
+    <script src="js/jquery-ui.js"></script>
   </head>
   <body>
     <header>
@@ -18,18 +22,22 @@
     </header>
     <section>
       <div class="container">
-      <form class="search-bar row">
+      <div class="search-bar row">
         <div class="form-group col-medium-4 col-large-4 col-small-8">
-          <input type="search" class="form-control" placeholder="Search an order" id="search-box">
-          </div>
-        <div class="form-group col-medium-2 col-large-2 col-small-4">
-          <input type="button" class="form-control btn btn-info" value="Search">
+          <input type="search" class="form-control" placeholder="Search an order" id="search-box" onclick="performAutocomplete()" ondblclick="getHistory()">
         </div>
-      </form>
+        <div class="form-group col-medium-2 col-large-2 col-small-4">
+          <button class="form-control btn btn-search" onclick="getOrderStatus()" id="search-but"> Search</button>
+        </div>
+      </div>
     </div>
     </section>
     <section>
+      <div class="container searched-order" style="display:none">
+        <h3 class="text-center">Searched orders</h3>
+      </div>
       <div class="container orders-list">
+        <h3 class="text-center">Orders</h3>
         <!--
         <div class="order-panel row">
           <div class="col-large-2 orderid">
@@ -57,9 +65,7 @@
           The order id will be a searchable field as in when the user starts typing the order id he sees suggestions based on the
           text entered and his last orders which have that text. </small></p> <p><span class="fa fa-smile-o"></span> Created by <a href="https://www.facebook.com/profile.php?id=100007726996586" target="_blank">codlocker</a></p>
       </div>
-
-      <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
-      <script type="text/javascript" src="orders.js"></script>
+      <script type="text/javascript" src="js/getjson.js"></script>
       <script type="text/javascript" src="js/script.js"></script>
     </footer>
   </body>
