@@ -11,7 +11,7 @@ function getJSONFile(path, callback) {
     request.open('GET', path, false);
     request.send();
 }
-var url="http://localhost/orderTrack/orders.json";
+var url="https://codlocker.github.io/WebDev-Projects/orderTrack/orders.json";
 function performAutocomplete() {
   /*Search Functonality */
   var values = [];
