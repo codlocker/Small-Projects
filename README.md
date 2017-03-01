@@ -1,4 +1,5 @@
 #Web Dev Assignments-
 
-Snake Game : http://codlocker.github.io/Snake-Game/
-Assignment: http://codlocker.github.io/orderTrack/
+> Snake Game : https://codlocker.github.io/WebDev-Projects/Snake_FOoDie/Welcome.html
+
+> Assignment: https://codlocker.github.io/WebDev-Projects/orderTrack/index.html
