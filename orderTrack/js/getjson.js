@@ -7,7 +7,7 @@ function getallJSON(check) {
     }
   getJSONFile(url,function(json){ // Get Only the first 5 json data
       for(x in json) {
-        if(count_fetch_data == 5 && !check) {break;}
+        if(count_fetch_data == 10 && !check) {break;}
         else {count_fetch_data++;}
         var order_panel = document.createElement("div");
         $(order_panel).addClass("order-panel row "+x);
