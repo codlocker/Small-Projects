@@ -85,6 +85,14 @@ section .orders-list {
   display: none;
 }
 /*Styling each panel*/
+.orders-head {
+  color: white;
+  font-weight: bolder;
+}
+.orders-head span {
+  margin-left: 45px;
+  cursor: pointer;
+}
 .order-panel {
   box-sizing: border-box;
   width: inherit;

@@ -1,6 +1,7 @@
 //console.log(json);
 function getallJSON(check) {
     if(check) {
+      $(".orders-head span").addClass("fa-eye").removeClass("fa-eye-slash");
       document.getElementsByClassName("orders-list")[0].innerHTML = '';
       $(".show-all").addClass("no_display");
     }
