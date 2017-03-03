@@ -84,6 +84,20 @@ section .orders-list {
 .no_display {
   display: none;
 }
+/*Styling Table Header */
+.table-header {
+  box-sizing: border-box;
+  width: inherit;
+  padding: 5px;
+  bottom: 0px;
+  font-family: Tahoma;
+  font-size: 20px;
+  margin: 10px auto 0px;
+  border: 2px solid #cc6699;
+  transition: 0.35s;
+  height: auto;
+  background-color: rgba(256,256,256,0.92);
+}
 /*Styling each panel*/
 .orders-head {
   color: white;
@@ -92,6 +106,10 @@ section .orders-list {
 .orders-head span {
   margin-left: 45px;
   cursor: pointer;
+  transition: 0.3s;
+}
+.orders-head span:hover {
+  transform: scale(1.2,1.2);
 }
 .order-panel {
   box-sizing: border-box;
@@ -103,7 +121,7 @@ section .orders-list {
   background-color: rgba(256,256,256,0.92);
 }
 .order-panel:hover {
-  box-shadow: 0px 0px 10px #cc6699;
+  box-shadow: 0px 0px 20px #cc6699;
 }
 .order-panel .col-large-2 {
   background-color: #66ff66;
