@@ -1,5 +1,5 @@
 /* Add titles to different portions*/
-document.addEventListener("DOMContentLoaded", function(event){
+function extras() {
   console.log("Hello World");
   $(".order-description").hide();
   $(".fa-envelope").attr("title","Email-Request regarding any status updates");
@@ -22,4 +22,4 @@ document.addEventListener("DOMContentLoaded", function(event){
       $(this).addClass("fa-caret-down");
     }
   });
-});
+}

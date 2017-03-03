@@ -11,13 +11,17 @@ function getJSONFile(path, callback) {
     request.open('GET', path, false);
     request.send();
 }
+// Default Global Variables
 var url="https://codlocker.github.io/WebDev-Projects/orderTrack/orders.json";
+var count_fetch_data = 0;
+var total_data = 0;
 function performAutocomplete() {
   /*Search Functonality */
   var values = [];
   getJSONFile(url,function(json){
     for (x in json) {
         values.push(x);
+        total_data+=1;
     }
     $( "#search-box" ).autocomplete({
       autoFocus: true,
@@ -51,9 +55,10 @@ function getHistory() {
 }
 function getOrderStatus() {
     var value = $("#search-box").val();
+    var i;
     if(value != "") {
     var orderslist = document.getElementsByClassName("order-panel");
-    for(var i=0;i<orderslist.length;i++) {
+    for(i=0;i<orderslist.length;i++) {
       try {
         var classList = orderslist[i].classList[2];
         if(classList == value) {
@@ -61,11 +66,15 @@ function getOrderStatus() {
           var temp = orderslist[i];
           $("."+value).css("background-color", "#ccffcc");
           $(temp).appendTo(".searched-order");
+          break;
         }
       }
       catch(Exception) {
         console.log("Does Not Exists");
       }
+    }
+    if(i=== orderslist.length) {
+      alert("Order ID does not exist");
     }
   }
   else {

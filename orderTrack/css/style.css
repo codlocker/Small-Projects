@@ -54,6 +54,36 @@ section .orders-list {
   box-sizing: border-box;
   position: relative;
 }
+@keyframes animate_show_all {
+  0% {top: 0px;}
+  10% {top: -0.4px;}
+  20% {top: -0.8px;}
+  30% {top: -1.2px;}
+  40% {top: -1.6px;}
+  50% {top: -2px;}
+  60% {top: -1.6px;}
+  70% {top: -1.2px;}
+  80% {top: -0.8px;}
+  90% {top: -0.4px;}
+  100% {top: 0px;}
+}
+.show-all {
+  position: relative;
+}
+.show-all span{
+  position: absolute;
+  padding: 10px;
+  color:white;
+  font-size:36px;
+  font-weight:bolder;
+  cursor:pointer;
+  animation-name: animate_show_all;
+  animation-duration: 0.9s;
+  animation-iteration-count: infinite;
+}
+.no_display {
+  display: none;
+}
 /*Styling each panel*/
 .order-panel {
   box-sizing: border-box;
