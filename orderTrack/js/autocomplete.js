@@ -18,9 +18,12 @@ var total_data = 0;
 function performAutocomplete() {
   /*Search Functonality */
   var values = [];
-  getJSONFile(url,function(json){
-    for (x in json) {
-        values.push(x);
+  var data = document.getElementsByClassName("orders-list")[0].getElementsByClassName("orderid");
+  var data_len = data.length;
+  for (var it = 0;it < data_len;it++) {
+      var iden = data[it].getElementsByClassName("text-center")[0].textContent;
+        //console.log(iden);
+        values.push(iden);
         total_data+=1;
     }
     $( "#search-box" ).autocomplete({
@@ -29,7 +32,6 @@ function performAutocomplete() {
       delay: 50,
       minLength: 1
     });
-  });
 }
 function getHistory() {
   var values = [];
