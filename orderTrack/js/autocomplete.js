@@ -12,7 +12,7 @@ function getJSONFile(path, callback) {
     request.send();
 }
 // Default Global Variables
-var url="https://codlocker.github.io/WebDev-Projects/orderTrack/orders.json";
+var url="https://codlocker.github.io/Small-Projects/orderTrack/orders.json";
 var count_fetch_data = 0;
 var total_data = 0;
 function performAutocomplete() {
