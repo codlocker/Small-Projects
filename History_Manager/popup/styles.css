@@ -1,0 +1,34 @@
+html, body {
+    min-width: 350px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #e6f2ff;
+    color: #003333;
+}
+
+header h1, footer p {
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+}
+.big {
+    color: red;
+    font-size: 24px !important;
+}
+
+.medium {
+    color: darkorange;
+    font-size: 20px !important;
+}
+
+.small {
+    color: darkgreen;
+    font-size: 18px !important;
+}
+
+#preloader {
+    margin: 20% auto;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
