@@ -3,6 +3,7 @@
  */
 let getCurrent = null;
 let new_url = "";
+document.addEventListener("DOMContentLoaded", restoreOptions);
 
 function startCheck(e) {
     e.preventDefault();
@@ -12,6 +13,7 @@ function startCheck(e) {
 }
 function getLink() {
     new_url = $("#url_complete").val();
+    console.log(new_url);
 }
 function saveLinks(error) {
     console.log(`Error: ${error}`);
@@ -19,9 +21,10 @@ function saveLinks(error) {
 }
 
 function addMoreLinks(result) {
+    console.log(result);
     browser.storage.local.set(
         {
-            'url': result + "\n" + new_url
+            'url': result.url + "\n" + new_url
         });
 }
 
@@ -31,7 +34,15 @@ function restoreOptions() {
 }
 
 function setData(result) {
-    $("#allowed_urls").html(result);
+    all_urls = result.url.split("\n");
+    let unique_urls = new Set();
+    let i;
+    for (i = 0; i < all_urls.length; i++)
+        unique_urls.add(all_urls[i]);
+    console.log(unique_urls);
+    for (let u of unique_urls) {
+        $("#allowed_urls").append("<p class='label'>" + u + "</p>");
+    }
 }
 
 function errorData(error) {
@@ -39,4 +50,3 @@ function errorData(error) {
 }
 
 document.querySelector("form").addEventListener("submit", startCheck);
-document.addEventListener("DOMContentLoaded", restoreOptions);
