@@ -1,19 +1,26 @@
 let searchHistory = browser.history.search({text: ""});
-let list = $(".content");
+let list = $("#content");
 let list_of_urls = {};
-
+class UrlContent {
+    constructor(url, name, count_f) {
+        this.url = url;
+        this.name = name;
+        this.count_f = count_f;
+    }
+}
 searchHistory.then((results) => {
     if (results.length < 1) {
 
     } else {
         for (let k in results) {
             let history = results[k].url;
-            var split_url = history.split("/");
+            let split_url = history.split("/");
             url = split_url[2].toString().trim();
+
             if (url in list_of_urls) {
-                list_of_urls[url] += 1;
+                list_of_urls[url].count_f += 1;
             } else {
-                list_of_urls[url] = 1;
+                list_of_urls[url] = new UrlContent(history, url, 1);
             }
         }
     }
@@ -21,24 +28,24 @@ searchHistory.then((results) => {
 });
 
 function getMostViewedListOfURLs(list_of_urls) {
-    for (let url in list_of_urls) {
+    for (let url_obj in list_of_urls) {
         let row = document.createElement("div");
         $(row).addClass("row");
 
-        let p_tag = document.createElement("p");
-        $(p_tag).text(url);
-        let first = create_a_row(8, "small"); $(first).append(p_tag);
+        let a_tag = document.createElement("a");
+        $(a_tag).text(list_of_urls[url_obj].name); $(a_tag).attr("href", list_of_urls[url_obj].url);
+        let first = create_a_row(8, "small"); $(first).append(a_tag);
 
 
         let p_tag_2 = document.createElement("p");
-        $(p_tag_2).text(list_of_urls[url]);
+        $(p_tag_2).text(list_of_urls[url_obj].count_f);
         let second = create_a_row(4, "small"); $(second).append(p_tag_2);
-        let font_type = getFontSizeforDownloads(list_of_urls[url]);
+        let font_type = getFontSizeforDownloads(list_of_urls[url_obj].count_f);
         if (font_type === 1) {$(second).addClass("medium");}
         else if(font_type === 2) {$(second).addClass("big");}
         else {$(second).addClass("small");}
         $(row).append(first); $(row).append(second);
-        $(".content").append(row);
+        list.append(row);
     }
 }
 

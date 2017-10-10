@@ -1,7 +1,7 @@
 html, body {
     min-width: 350px;
     margin: 10px;
-    font-size: 18px;
+    font-size: 14px;
     background-color: #e6f2ff;
     color: #003333;
 }
@@ -12,17 +12,17 @@ header h1, footer p {
     text-align: center;
 }
 .big {
-    color: red;
+    color: red !important;
     font-size: 24px !important;
 }
 
 .medium {
-    color: darkorange;
+    color: darkorange !important;
     font-size: 20px !important;
 }
 
 .small {
-    color: darkgreen;
+    color: darkgreen !important;
     font-size: 18px !important;
 }
 
@@ -31,4 +31,14 @@ header h1, footer p {
     text-align: center;
     width: 40px;
     height: 40px;
+}
+
+#content a {
+    color: #003333 !important;
+    font-weight: 700;
+}
+#content a:hover, #data a:visited{
+    color: #0066cc !important;
+    text-decoration: underline !important;
+    font-weight: 700;
 }
