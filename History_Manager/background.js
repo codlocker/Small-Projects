@@ -17,14 +17,17 @@ function getLink() {
 }
 function saveLinks(error) {
     console.log(`Error: ${error}`);
-    browser.storage.local.set('url', new_url);
+    let unique_urls = new Set();
+    unique_urls.add(new_url)
+    browser.storage.local.set('url', unique_urls);
 }
 
 function addMoreLinks(result) {
-    console.log(result);
+    let res = new Set(result.url);
+    res.add(new_url);
     browser.storage.local.set(
         {
-            'url': result.url + "\n" + new_url
+            'url': res
         });
 }
 
@@ -34,14 +37,11 @@ function restoreOptions() {
 }
 
 function setData(result) {
-    all_urls = result.url.split("\n");
-    let unique_urls = new Set();
+    let unique_urls = new Set(result.url);
     let i;
-    for (i = 0; i < all_urls.length; i++)
-        unique_urls.add(all_urls[i]);
-    console.log(unique_urls);
     for (let u of unique_urls) {
-        $("#allowed_urls").append("<p class='label'>" + u + "</p>");
+        console.log(u);
+        $("#allowed_urls").append("<p class='label'>" + u + "</p><br>");
     }
 }
 
