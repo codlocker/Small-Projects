@@ -2,7 +2,7 @@
  * Created by shuttle3468 on 10/10/17.
  */
 let getCurrent = null;
-let new_url = "";
+let new_url = "", res = new Set();
 document.addEventListener("DOMContentLoaded", restoreOptions);
 
 function startCheck(e) {
@@ -18,12 +18,12 @@ function getLink() {
 function saveLinks(error) {
     console.log(`Error: ${error}`);
     let unique_urls = new Set();
-    unique_urls.add(new_url)
-    browser.storage.local.set('url', unique_urls);
+    unique_urls.add(new_url);
+    browser.storage.local.set({'url': unique_urls});
 }
 
 function addMoreLinks(result) {
-    let res = new Set(result.url);
+    res = new Set(result.url);
     res.add(new_url);
     browser.storage.local.set(
         {
@@ -37,9 +37,12 @@ function restoreOptions() {
 }
 
 function setData(result) {
-    let unique_urls = new Set(result.url);
+    res = new Set(result.url);
     let i;
-    for (let u of unique_urls) {
+    if (res.size === 0) {
+        $("#allowed_urls").append("<p>No URLs Added yet!</p>");
+    }
+    for (let u of res) {
         let url_content = createDivForLink(u);
         $("#allowed_urls").append(url_content);
     }
@@ -67,8 +70,19 @@ function createDivForLink(u) {
     $(button).addClass("button").addClass("alert");
     $(button).attr("data-value", u);
     $(button).text("DELETE");
-    $(button).on("click", function () {
-       alert("Need to complete this part");
+    $(button).on("click", function (event) {
+        console.log("Deleting:" + u);
+        console.log(res.size);
+        for (let u of res) {
+            console.log(u);
+        }
+        res.delete(u);
+        browser.storage.local.set(
+            {
+                'url': res
+            });
+        $(this).text("DELETED");
+        $(this).addClass("disabled").removeClass("alert");
     });
 
     // Append All Data
