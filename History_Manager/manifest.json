@@ -7,7 +7,7 @@
   "description": "Manages the websites you visit",
   "homepage_url": "https://github.com/codlocker/CodeMate/",
   "icons": {
-    "48": "icons/large.jpg"
+    "48": "icons/mate.png"
   },
 
   "permissions": [
@@ -20,7 +20,7 @@
   },
 
   "browser_action": {
-    "default_icon": "icons/large.jpg",
+    "default_icon": "icons/mate.png",
     "default_title": "CodeMate",
     "default_popup": "popup/index.html"
   }

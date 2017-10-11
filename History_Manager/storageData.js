@@ -40,8 +40,8 @@ function setData(result) {
     let unique_urls = new Set(result.url);
     let i;
     for (let u of unique_urls) {
-        console.log(u);
-        $("#allowed_urls").append("<p class='label'>" + u + "</p><br>");
+        let url_content = createDivForLink(u);
+        $("#allowed_urls").append(url_content);
     }
 }
 
@@ -49,4 +49,32 @@ function errorData(error) {
     console.log(`Error: ${error}`);
 }
 
+function createDivForLink(u) {
+    "use strict";
+    let row, col8, col4, p_tag, button;
+    row = document.createElement("div");
+    $(row).addClass("row");
+    col8 = document.createElement("div");
+    $(col8).addClass("small-8"); $(col8).addClass("columns");
+    col4 = document.createElement("div");
+    $(col4).addClass("small-4"); $(col4).addClass("columns");
+
+    p_tag = document.createElement("p");
+    $(p_tag).addClass("label").addClass("success");
+    $(p_tag).text(u);
+
+    button = document.createElement("button");
+    $(button).addClass("button").addClass("alert");
+    $(button).attr("data-value", u);
+    $(button).text("DELETE");
+    $(button).on("click", function () {
+       alert("Need to complete this part");
+    });
+
+    // Append All Data
+    $(col8).append(p_tag);
+    $(col4).append(button);
+    $(row).append(col8, col4);
+    return row;
+}
 document.querySelector("form").addEventListener("submit", startCheck);
