@@ -72,10 +72,6 @@ function createDivForLink(u) {
     $(button).text("DELETE");
     $(button).on("click", function (event) {
         console.log("Deleting:" + u);
-        console.log(res.size);
-        for (let u of res) {
-            console.log(u);
-        }
         res.delete(u);
         browser.storage.local.set(
             {

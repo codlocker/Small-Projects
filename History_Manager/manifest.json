@@ -12,7 +12,8 @@
 
   "permissions": [
     "history",
-    "storage"
+    "storage",
+    "notifications"
   ],
 
   "options_ui": {
@@ -21,7 +22,7 @@
 
   "browser_action": {
     "default_icon": "icons/mate.png",
-    "default_title": "CodeMate",
+    "default_title": "Activity Manager",
     "default_popup": "popup/index.html"
   }
 

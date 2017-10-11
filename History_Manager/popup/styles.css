@@ -2,8 +2,9 @@ html, body {
     min-width: 350px;
     margin: 10px;
     font-size: 14px;
-    background-color: #e6f2ff;
+    background-color: whitesmoke;
     color: #003333;
+    text-align: center;
 }
 
 header h1, footer p {
@@ -34,7 +35,7 @@ header h1, footer p {
 }
 
 #content a {
-    color: #003333 !important;
+    color: #0000ff !important;
     font-weight: 700;
 }
 #content a:hover, #data a:visited{
