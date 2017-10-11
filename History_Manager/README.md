@@ -1,8 +1,8 @@
-### ADDON FOR VIEWING TOP QUESTIONS ON GeeksForGeeks ###
+### BUILDING A NEW IDEA ###
 --------------------------------------------------------
 This add-on for **Firefox** is basically a tool managing your Browser Activity by notifying you regarding 
 websites you don't want o visit a lot :P  
-- Current release [Version 1.0]()
+- Current release None
 
 - Completed Popup Design and Settings Page
 
